@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Container, InputList, ButtonAdd, Text } from './Home.styles';
+import { Container, InputList, ButtonAdd } from './Home.styles';
 
 import { Tweet } from '../../components';
 
@@ -29,9 +29,7 @@ export function Home() {
 
       {
         tweets.map(tweet => (
-          <Text>
             <Tweet text={tweet} />
-          </Text>
         ))
       }
     </div>

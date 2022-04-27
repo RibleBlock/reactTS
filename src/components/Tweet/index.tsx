@@ -1,9 +1,12 @@
+
+import { Text } from './Tweet.styles';
+
 type TweetProps = {
   text: string
 };
 
 export function Tweet({ text }: TweetProps) {
   return (
-    <p>{text}</p>
+    <Text>{text}</Text>
   );
 }

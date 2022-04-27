@@ -9,9 +9,17 @@ export default createGlobalStyle`
     border: 0;
     font-family: Roboto, sans-serif;
   }
-  html, input, button {
+  html, body, #root {
+    max-height: 100vh;
+    max-width: 100vw;
+    width: 100%;
+    height: 100%;
+  }
+  body, input, button {
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
-    background-color: #b2b2a2;
+  }
+  body {
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
   }
 `;

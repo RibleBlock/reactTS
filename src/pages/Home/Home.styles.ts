@@ -5,7 +5,14 @@ export const Container = styled.div`  // Criando um componente chamado Container
   align-items: center;
   justify-content: center;
   margin: 8.4rem 0;
-`;
+
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
+  /**
+    $ {} - Template strings - para usar variaveis normalmente
+    () => - arrow function
+    {} - Abre as chaves de novo para desestruturar o theme do ThemeProvider que foi passado no App.tsx
+  */
+  `;
 
 export const InputList = styled.input`  // Criando um componente chamado InputList que é uma 'input'
 width: 100%;
@@ -20,9 +27,5 @@ export const ButtonAdd = styled.button`  // Criando um componente chamado Button
   font-size: 1.6rem;
   padding: 6px 12px;
   color: #fff;
-  background-color: #8257e6;
-`;
-
-export const Text = styled.p` // Criando um componente chamado Text que é uma tag 'p'
-  font-size: 48px;
+  background-color: ${({ theme }) => theme.COLORS.BUTTONSUBMIT};
 `;
