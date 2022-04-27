@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Container, Text } from './Home.styles';
+import { Container, InputList, ButtonAdd, Text } from './Home.styles';
 
 import { Tweet } from '../../components';
 
@@ -14,23 +14,18 @@ export function Home() {
 
   return (
 
-    <Container>
+    <Container> {/* <-- div */}
     <div>
-      <input
+      <InputList
         type="text"
         placeholder='Digite aqui...'
         onChange={e => setCurrentName(e.target.value)}
       />
-      <button
+      <ButtonAdd
         onClick={createTweet}
-        style={{
-          backgroundColor: '#8257e6',
-          padding: '6px 12px',
-          color: '#fff'
-        }}
       >
         Adicionar Tweet
-      </button>
+      </ButtonAdd>
 
       {
         tweets.map(tweet => (

@@ -1,6 +1,6 @@
 
+import { Title } from './Catalog.styles';
+
 export function Catalog() {
-  return (
-    <h1>CATALOGO!</h1>
-  );
+  return <Title>CATALOGO!</Title>;
 }
