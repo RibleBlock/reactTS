@@ -4,11 +4,13 @@ export const Container = styled.div`  // Criando um componente chamado Container
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 8.4rem 0;
 `;
 
 export const InputList = styled.input`  // Criando um componente chamado InputList que é uma 'input'
 width: 100%;
 font-size: 1.6rem;
+margin: 1rem 0;
 padding: 6px 12px;
 border: .1rem solid #000;
 `;
