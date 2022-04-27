@@ -9,10 +9,9 @@ export default createGlobalStyle`
     border: 0;
     font-family: Roboto, sans-serif;
   }
-  html, body, #root {
-    max-height: 100vh;
-    max-width: 100vw;
-    width: 100%;
-    height: 100%;
+  html, input, button {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #b2b2a2;
   }
 `;
