@@ -1,9 +1,26 @@
-import { useHref } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+export const Specialist = styled.p`
+  font-size: 1.2rem;
+  color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
+`;
+
+export const Name = styled.p`
+  margin-top: .8rem;
+  font-size: 1.6rem;
+  color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
+`;
+
+export const Avatar = styled.img`
+  width: 8rem;
+  height: 8rem;
+  border-radius: 4rem;
+  transition: 2s;
+`;
 
 export const Container = styled.a.attrs({
   // Aqui dentro vai os atributos da <tag> //
-  href: "https://github.com/ribleblock",
+  /* href: "https://github.com/ribleblock", */
   target: "_blank"
   // //
 })`
@@ -17,22 +34,8 @@ export const Container = styled.a.attrs({
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
 
-export const Avatar = styled.img`
-  width: 8rem;
-  height: 8rem;
-  border-radius: 4rem;
-`;
-
-export const Name = styled.p`
-  margin-top: .7rem;
-  font-size: 1.6rem;
-  color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
-  `;
-
-export const Specialist = styled.p`
-
-  font-size: 1.2rem;
-  color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
+  &:hover > ${Avatar} {
+    transform: scale(1.2);
+  }
 `;

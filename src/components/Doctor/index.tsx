@@ -5,16 +5,21 @@ import {
   Specialist
 } from "./Doctor.styles";
 
-export function Doctor() {
+export type DoctorProps = {
+  nick: string;
+  specialist: string;
+};
+
+export function Doctor({ nick, specialist }: DoctorProps) {
   return (
-    <Container>
-      <Avatar src="https://github.com/ribleblock.png" />
+    <Container href={`https://github.com/${nick}`}>
+      <Avatar src={`https://github.com/${nick}.png`} />
       <Name>
-        Riquelme Aparecido
+        { nick }
       </Name>
 
       <Specialist>
-        Programmer
+        { specialist }
       </Specialist>
     </Container>
   );
