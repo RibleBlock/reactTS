@@ -7,10 +7,11 @@ import {
 
 export type DoctorProps = {
   nick: string;
-  specialist: string;
+  name: string;
+  location: string;
 };
 
-export function Doctor({ nick, specialist }: DoctorProps) {
+export function Doctor({ nick, name, location }: DoctorProps) {
   return (
     <Container href={`https://github.com/${nick}`}>
       <Avatar src={`https://github.com/${nick}.png`} />
@@ -19,7 +20,10 @@ export function Doctor({ nick, specialist }: DoctorProps) {
       </Name>
 
       <Specialist>
-        { specialist }
+        { name }
+      </Specialist>
+      <Specialist>
+        { location }
       </Specialist>
     </Container>
   );

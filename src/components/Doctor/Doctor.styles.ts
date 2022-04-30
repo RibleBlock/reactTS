@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Specialist = styled.p`
   font-size: 1.2rem;
@@ -16,6 +16,7 @@ export const Avatar = styled.img`
   height: 8rem;
   border-radius: 4rem;
   transition: 2s;
+  transition-timing-function: ease;
 `;
 
 export const Container = styled.a.attrs({

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Header = styled.header`
   background-color: ${({ theme }) => theme.COLORS.TEXT_SECUNDARY};
@@ -18,6 +18,20 @@ export const Header = styled.header`
     color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
   }
 `;
+
+export const formComp = css`
+  display: block;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  margin: 1rem auto;
+
+  & + button {
+
+  }
+  `;
+
+export const InputReq = styled.input`${formComp}`;
+export const Button = styled.button`${formComp}`;
 
 export const ListSpecialist = styled.div`
   display: flex;
